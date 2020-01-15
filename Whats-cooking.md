@@ -2,8 +2,6 @@
 
 Welcome to What's Cooking. I'm an amateur data scientist, and I set out to solve a text analysis classification problem from [Kaggle](https://www.kaggle.com/c/whats-cooking-kernels-only), using Julia language. The aim is to try and predict the cuisine of a recipe, given the ingredients in it.
 
-Here are all the steps I went through. When I say I'm an amateur, I'm *really* a beginner, and not a computer science major, so I apologise in advance for messy code and long-winded steps. Do leave your tips and advice in the comments.
-
 ## The Data
 The data obtained from [Kaggle](https://www.kaggle.com/c/whats-cooking-kernels-only/data) was an array of dictionaries and looked like this:
 ```
@@ -83,12 +81,6 @@ for ii=1:length(data)
         filter!(e->e!=data[i],data)
     end
 end
-```
-
-This gives us a warning that we can ignore in this case.
-```
-â”Œ Warning: TokenDocument's can only approximate the original text
-â”” @ TextAnalysis /home/jrun/.julia/packages/TextAnalysis/h7oB5/src/document.jl:111
 ```
 
 ## The Word2Vec Model
